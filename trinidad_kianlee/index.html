@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="./trinidad_style.css" rel="stylesheet" />
+    <title>Trinidad, Kian Lee</title>
+  </head>
+  <body>
+    <header>
+      <h1>Trinidad, Kian Lee</h1>
+    </header>
+    <div class="interests">
+      <h2>My Interests and Hobbies</h2>
+      <ul class="interests-list">
+        <li class="interest">Watching movies</li>
+        <li class="interest">Playing games</li>
+        <li class="interest">Horror documentaries</li>
+        <li class="interest">Watching tutorial videos</li>
+      </ul>
+    </div>
+    <div class="works">
+      <h2>My Works</h2>
+      <ol class="works-list">
+        <li class="work"><a href="./Myworks.html">Flames game c++</a></li>
+        <li class="work"><a href="./Myworks.html">My Chemical Romance</a></li>
+        <li class="work"><a href="./Myworks.html">CRUD Forms php</a></li>
+        <li class="work"><a href="./Myworks.html">Diary about myself</a></li>
+      </ol>
+    </div>
+    <div class="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial-list">
+        <p>Love your work here man! - Gasta</p>
+        <p>Nice work! - Armedilla</p>
+        <p>Excellent job! - Rosario</p>
+        <p>Nice design bro love the minimalist types! - Escuro</p>
+        <p>It's cool, really love what you did! - Ilagan</p>
+      </div>
+    </div>
+    <div class="gallery">
+      <h2>Gallery</h2>
+      <div class="image-container">
+        <div class="image-box">
+          <img src="./images/4.jpg" alt="A whale"/>
+        </div>
+        <div class="image-box">
+          <img src="./images/5.jpg" alt="A mountain"/>
+        </div>
+        <div class="image-box">
+          <img src="./images/sky.jpg" alt="A galaxy"/>
+        </div>
+        <div class="image-box">
+          <img src="./images/8.jpg" alt="A forest"/>
+        </div>
+        <div class="image-box">
+          <img src="./images/9.jpg" alt="A lonely street"/>
+        </div>
+        <div class="image-box">
+          <img src="./images/10.jpg" alt="A tree"/>
+        </div>
+      </div>
+    </div>
+    <div class="class-session">
+      <h2>Class Session</h2>
+      <p>
+        For me, the reason why we conducted F2F is for us to understand the 
+        new lesson, the lesson is hard that's why we need to focus throughly,
+        because if it's online, we will having a hard time understanding it
+        since sometimes there are many distractions while conducting online
+        class. I prefer F2F class because it helps me to understand the new
+        lesson without any distraction and full focus.
+      </p>
+    </div>
+    <div class="contact">
+      <h2>Contact Me</h2>
+      <div class="form-container">
+        <form class="container" action="#">
+          <div class="forms">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" name="email" required/>
+            </div>
+            <div>
+              <label for="fullname">Fullname</label>
+              <input type="text" name="fullname" required/>
+            </div>
+            <div>
+              <label for="age">Age</label>
+              <input type="number" name="age" required/>
+            </div>
+            <div>
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" required/>
+            </div>
+          </div>
+          <div class="message-container">
+            <label for="message">Message</label>
+            <textarea name="message" cols="30" rows="10" required></textarea>
+          </div>
+          <div class="checkbox-container">
+            <input type="checkbox" name="sendme"/>
+            <label for="sendme">Send me a copy</label>
+          </div>
+          <div class="submit-container">
+            <input type="submit" value="Submit"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="goals">
+      <h2>My Goals</h2>
+      <div class="goal">
+        <div class="icon"></div>
+        <h3>To pass this semester</h3>
+        <p>
+          All throughout my college journey, this semester is the most
+          challenging of all.
+        </p>
+      </div>
+      <div class="goal">
+        <div class="icon"></div>
+        <h3>Financially stable</h3>
+        <p>To live without worrying about the prices of the items.</p>
+      </div>
+      <div class="goal">
+        <div class="icon"></div>
+        <h3>Comfortable and successful career</h3>
+        <p>To have a enjoyable career and doing what I love the most.</p>
+      </div>
+      <div class="goal">
+        <div class="icon"></div>
+        <h3>Granting her wish</h3>
+        <p>Someday, I want to grant all of my mothers' wish.</p>
+      </div>
+    </section>
+    <div class="comments-section">
+      <h2>Comments</h2>
+      <div class="sort-buttons">
+        <select id="sort_dropdown" onchange="handleSortChange()">
+          <option value="desc">Newest</option>
+          <option value="asc">Oldest</option>
+        </select>
+      </div>
+      <div id="comments_list"></div>
+    </div>
+    <div class="comment-section">
+      <h2>Add a comment</h2>
+      <div class="comment-container">
+        <form class="comments" disabled>
+          <div class="comment-group">
+            <label>Name</label>
+            <input
+              type="text"
+              id="user_name"
+              required
+              oninput="checkComment()"/>
+          </div>
+          <div class="comment-group">
+            <label>Comment</label>
+            <textarea
+              id="user_comment"
+              name="comment"
+              required
+              oninput="checkComment()"></textarea>
+          </div>
+          <div class="comment-container">
+            <button
+              type="submit"
+              id="comment_button"
+              disabled
+              onclick="addComment()">Comment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
