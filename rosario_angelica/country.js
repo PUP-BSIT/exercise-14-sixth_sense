@@ -1,14 +1,14 @@
-const countryInput = document.getElementById('country-input');
-const searchBtn = document.getElementById('search-btn');
-const countryDetails = document.getElementById('country-details');
-const regionCountries = document.getElementById('region-countries');
+const countryInput = document.getElementById('country_input');
+const searchBtn = document.getElementById('search_btn');
+const countryDetails = document.getElementById('country_details');
+const regionCountries = document.getElementById('region_countries');
 
-// Constants for API endpoints
+
 const BASE_URL = 'https://restcountries.com/v3.1';
 
 searchBtn.addEventListener('click', searchCountry);
 
-// Function to search for a country by name
+
 async function searchCountry() {
   const countryName = countryInput.value.trim();
   if (countryName) {
@@ -19,12 +19,14 @@ async function searchCountry() {
       if (data.length > 0) {
         const country = data[0];
         const selectedDetails = [
-          { label: 'Flag', value: `<img src="${country.flags.png}" alt="${country.name.common} Flag" width="100">` },
+          { label: 'Flag', value: `<img src="${country.flags.png}" 
+          alt="${country.name.common}">` },
           { label: 'Name', value: country.name.common },
           { label: 'Capital', value: country.capital || 'N/A' },
           { label: 'Population', value: country.population.toLocaleString() },
           { label: 'Area', value: `${country.area.toLocaleString()} km²` },
-          { label: 'Currency', value: country.currencies ? Object.values(country.currencies)[0].name : 'N/A' },
+          { label: 'Currency', value: country.currencies ? Object.values
+          (country.currencies)[0].name : 'N/A' },
         ];
 
         const region = country.region;
@@ -42,21 +44,23 @@ async function searchCountry() {
   }
 }
 
-// Function to display the details of the selected country
+
 function displayCountryDetails(details) {
-  const detailsHTML = details.map(detail => `<p><strong>${detail.label}:</strong> ${detail.value}</p>`).join('');
+  const detailsHTML = details.map(detail => `<p><strong>${detail.label}:
+  </strong> ${detail.value}</p>`).join('');
   countryDetails.innerHTML = `<h3>Country Details</h3>${detailsHTML}`;
 }
 
-// Function to fetch and display countries in the same region
 async function fetchRegionCountries(region) {
   try {
     const response = await fetch(`${BASE_URL}/region/${region}`);
     const data = await response.json();
 
     const countryNames = data.map(country => country.name.common);
-    const countriesHTML = countryNames.map(name => `<li>${name}</li>`).join('');
-    regionCountries.innerHTML = `<h3>Countries in the ${region} Region</h3><ul>${countriesHTML}</ul>`;
+    const countriesHTML = countryNames.map(name => `<li>
+    ${name}</li>`).join('');
+    regionCountries.innerHTML = `<h3>Countries in the ${region} 
+    Region</h3><ul>${countriesHTML}</ul>`;
   } catch (error) {
     console.error('Error fetching region countries:', error);
     regionCountries.innerHTML = '<p>Error fetching region countries.</p>';
