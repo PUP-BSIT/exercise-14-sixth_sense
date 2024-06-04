@@ -39,7 +39,8 @@ async function searchCountry() {
       }
     } catch (error) {
       console.error('Error fetching country data:', error);
-      countryDetails.innerHTML = `<p>Error fetching country data: ${error.message}</p>`;
+      countryDetails.innerHTML = `<p>Error fetching country data: 
+        ${error.message}</p>`;
       regionCountries.innerHTML = '';
     }
   }
