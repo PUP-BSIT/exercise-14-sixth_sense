@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#search {
+  margin-bottom: 20px;
+}
+
+#country-details,
+#region-countries {
+  margin-top: 20px;
+}
