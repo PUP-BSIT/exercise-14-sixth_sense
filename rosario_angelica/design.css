@@ -9,14 +9,7 @@ body {
   background-color: #f8f9fa;
 }
 
-.header {
-  background-color: #ff7e5f;
-  color: black;
-  text-align: center;
-  padding: 40px 0;
-  box-shadow: 4px 5px 15px black;
-}
-
+h1,
 h2, 
 h3 {
   text-align: center;

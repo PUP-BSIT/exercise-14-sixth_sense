@@ -3,30 +3,31 @@ const searchBtn = document.getElementById('search_btn');
 const countryDetails = document.getElementById('country_details');
 const regionCountries = document.getElementById('region_countries');
 
-
 const BASE_URL = 'https://restcountries.com/v3.1';
 
 searchBtn.addEventListener('click', searchCountry);
-
 
 async function searchCountry() {
   const countryName = countryInput.value.trim();
   if (countryName) {
     try {
       const response = await fetch(`${BASE_URL}/name/${countryName}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
       const data = await response.json();
 
       if (data.length > 0) {
         const country = data[0];
         const selectedDetails = [
           { label: 'Flag', value: `<img src="${country.flags.png}" 
-          alt="${country.name.common}">` },
+           alt="${country.name.common}">` },
           { label: 'Name', value: country.name.common },
           { label: 'Capital', value: country.capital || 'N/A' },
           { label: 'Population', value: country.population.toLocaleString() },
           { label: 'Area', value: `${country.area.toLocaleString()} km²` },
           { label: 'Currency', value: country.currencies ? Object.values
-          (country.currencies)[0].name : 'N/A' },
+           (country.currencies)[0].name : 'N/A' },
         ];
 
         const region = country.region;
@@ -38,12 +39,11 @@ async function searchCountry() {
       }
     } catch (error) {
       console.error('Error fetching country data:', error);
-      countryDetails.innerHTML = '<p>Error fetching country data.</p>';
+      countryDetails.innerHTML = `<p>Error fetching country data: ${error.message}</p>`;
       regionCountries.innerHTML = '';
     }
   }
 }
-
 
 function displayCountryDetails(details) {
   const detailsHTML = details.map(detail => `<p><strong>${detail.label}:
@@ -60,7 +60,7 @@ async function fetchRegionCountries(region) {
     const countriesHTML = countryNames.map(name => `<li>
      ${name}</li>`).join('');
     regionCountries.innerHTML = `<h3>Countries in the ${region} 
-    Region</h3><ul>${countriesHTML}</ul>`;
+     Region</h3><ul>${countriesHTML}</ul>`;
   } catch (error) {
     console.error('Error fetching region countries:', error);
     regionCountries.innerHTML = '<p>Error fetching region countries.</p>';
