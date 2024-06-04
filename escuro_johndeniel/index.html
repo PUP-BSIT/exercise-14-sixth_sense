@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Escuro_JohnDeniel Page</title>
+  </head>
+  <body>
+    <div>
+      <h1>Escuro, John Deniel</h1>
+    </div>
+
+    <div class="container">
+      <div>
+        <h2>My Interest and Hobbies</h2>
+        <ul>
+          <li>Computer</li>
+          <li>Gaming</li>
+          <li>Reading</li>
+          <li>Watching Sports</li>
+          <li>Cooking</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>My Works</h2>
+        <ol>
+          <li><a href="#">work1</a></li>
+          <li><a href="#">work2</a></li>
+          <li><a href="#">work3</a></li>
+          <li><a href="#">work4</a></li>
+          <li><a href="#">work5</a></li>
+        </ol>
+      </div>
+
+      <div>
+        <h2>My Goals</h2>
+        <ol>
+          <li>Master front-end technologies</li>
+          <li>Learn back-end development</li>
+          <li>Build and deploy full-stack web applications</li>
+          <li>Implement data structures and algorithms</li>
+          <li>Contribute to open source projects</li>
+        </ol>
+      </div>
+    </div>
+
+    <div>
+      <div class="testimonials-text">
+        <h2>Testimonials</h2>
+      </div>
+      <div class="testimonials-list">
+        <ol>
+          <li>Your website looks cool! -Gasta</li>
+          <li>Hi Deniel, I like your website! -Trinidad</li>
+          <li>Nice work! -Rosario</li>
+          <li>Clean and Neat! -Armedilla</li>
+          <li>Really love the aesthetic of it! - Ilagan</li>
+        </ol>
+      </div>
+    </div>
+
+    <div>
+      <div class="gallery-text">
+        <h2>Gallery</h2>
+      </div>
+      <div class="gallery">
+        <img src="./images/bloonstd6.jpg" alt="bloonstd6" />
+        <img src="./images/gaming.webp" alt="gaming" />
+        <img src="./images/aogoshima.jpg" alt="aogoshima" />
+        <img src="./images/Graduation.jpg" alt="graduation" />
+        <img src="./images/tyler.jpg" alt="tyler" />
+        <img src="./images/kanye.jpg" alt="kanye" />
+      </div>
+    </div>
+
+    <div>
+      <div class="classes-text">
+        <h2>Face-To-Face Classes</h2>
+      </div>
+      <div class="classes-list">
+        <ol>
+          <li>
+            It's a much better way to learn because the teacher is always
+            there to help you.
+          </li>
+          <li>Also the class is much more interactive and engaging.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <form class="container">
+        <div class="contact-text">
+          <h2>Contact Me</h2>
+        </div>
+        <div class="upper">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter your Email"/>
+          </div>
+          <div>
+            <label for="fullname">Full Name</label>
+            <input type="text" name="fullname" placeholder="Enter your Name"/>
+          </div>
+          <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" placeholder="Enter your Age" />
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              placeholder="Enter your Subject"/>
+          </div>
+        </div>
+
+        <div class="message-container">
+          <label for="message">Message</label>
+          <div class="message-area">
+            <textarea
+              name="message"
+              rows="7"
+              cols="30"
+              placeholder="Enter your Message"></textarea>
+          </div>
+        </div>
+
+        <div class="checkbox-container">
+          <input type="checkbox" name="sendme" />
+          <label for="sendme">Send me a copy</label>
+        </div>
+
+        <div class="submit-container">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+
+    <div class="comment-form">
+      <h2>Leave a Comment</h2>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your Name"
+            oninput="validateInput()"/>
+        </div>
+        <div>
+          <label for="comment">Comment</label>
+          <textarea
+            id="comment"
+            name="comment"
+            required
+            placeholder="Enter your Comment"
+            required
+            oninput="validateInput()"></textarea>
+        </div>
+        <button
+          type="button"
+          id="submit_btn"
+          disabled
+          onclick="addComment()">
+          Comment
+        </button>
+      </form>
+    </div>
+
+    <div>
+      <h2 class="comment-text">Comments</h2>
+      <div class="sort-buttons">
+        <button id="sort_asc" onclick="sortComments(true)">
+          Sort Ascending
+        </button>
+        <button id="sort_desc" onclick="sortComments(false)">
+          Sort Descending
+        </button>
+      </div>
+      <div class="comment">
+        <ol id="comment_list"></ol>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
