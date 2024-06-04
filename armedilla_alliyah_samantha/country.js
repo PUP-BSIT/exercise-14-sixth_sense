@@ -1,7 +1,7 @@
-const countryInput = document.getElementById('country-input');
-const searchBtn = document.getElementById('search-btn');
-const countryDetails = document.getElementById('country-details');
-const regionCountries = document.getElementById('region-countries');
+const countryInput = document.getElementById('country_input');
+const searchBtn = document.getElementById('search_btn');
+const countryDetails = document.getElementById('country_details');
+const regionCountries = document.getElementById('region_countries');
 
 const BASE_URL = 'https://restcountries.com/v3.1';
 

@@ -1,4 +1,4 @@
-function validate_input() {
+function validateInput() {
   const input_field = document.querySelector("#name_input");
   const comment_field = document.querySelector("#comment_input");
   const submit_btn = document.querySelector("#submit_btn");
