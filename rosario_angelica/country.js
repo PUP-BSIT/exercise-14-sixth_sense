@@ -47,7 +47,7 @@ async function searchCountry() {
 
 function displayCountryDetails(details) {
   const detailsHTML = details.map(detail => `<p><strong>${detail.label}:
-  </strong> ${detail.value}</p>`).join('');
+    </strong> ${detail.value}</p>`).join('');
   countryDetails.innerHTML = `<h3>Country Details</h3>${detailsHTML}`;
 }
 
@@ -58,7 +58,7 @@ async function fetchRegionCountries(region) {
 
     const countryNames = data.map(country => country.name.common);
     const countriesHTML = countryNames.map(name => `<li>
-    ${name}</li>`).join('');
+     ${name}</li>`).join('');
     regionCountries.innerHTML = `<h3>Countries in the ${region} 
     Region</h3><ul>${countriesHTML}</ul>`;
   } catch (error) {
