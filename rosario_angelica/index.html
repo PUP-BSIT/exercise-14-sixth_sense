@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="design.css"/>
+    <title>Rosario, Angelica G. Page</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Angelica G. Rosario</h1>
+    </header>
+
+    <div class="container">
+      <div class="section">
+        <h2>My Interests & Hobbies</h2>
+        <ul>
+          <li>Watching movies</li>
+          <li>Eating</li>
+          <li>Board Games</li>
+          <li>Sleeping</li>
+          <li>Travel</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>My Works</h2>
+         <ol>
+           <li><a href="#">Website 1</a></li>
+           <li><a href="#">Website 2</a></li>
+           <li><a href="#">Website 3</a></li>
+           <li><a href="#">Website 4</a></li>
+           <li><a href="#">Website 5</a></li>
+         </ol>
+      </div>
+
+      <div class="section">
+        <h2>My Goals</h2>
+          <ul>
+           <li>Pass all my subjects</li>
+           <li>Learn a new skills</li>
+           <li>Get a degree</li>
+           <li>Get a stable job in IT industry</li>
+           <li>Spend a quality time with family and friends</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Testimonials</h2>
+         <div class="testimonial-list">
+           <p>Nice designs - Trinidad</p>
+           <p>Wow, it looks cool! - Gasta</p>
+           <p>Cute design Angelica! - Escuro</p>
+           <p>It's very unique, I like it. - Ilagan</p>
+           <p>Wow, nice work! - Armedilla</p>
+         </div>
+      </div>
+    </div>
+
+   <div class="container">
+     <div class="section">
+       <h2>My Thoughts about F2F Class</h2>
+        <p>I believe face-to-face classes are more real life experience
+           because instructors can keep track of each student's progress 
+           and see who's engaged. Personally, I find it easier to concentrate
+           and understand the material when I'm in the classroom.
+        </p>
+     </div>
+   </div>
+
+    <div class="gallery">
+      <h2>My Gallery</h2>
+      <div class="image-container">
+        <div class="ange">
+          <img src="./images/1.jpg" alt="City with sunset"/>
+        </div>
+        <div class="ange">
+          <img src="./images/2.jpg" alt="View from the lighthouse"/>
+        </div>
+        <div class="ange">
+          <img src="./images/3.jpg" alt="Sunset hour at arca"/>
+        </div>
+        <div class="ange">
+          <img src="./images/4.jpg" alt="Sunset by the river"/>
+        </div>
+        <div class="ange">
+          <img src="./images/5.jpg" alt="River"/>
+        </div>
+        <div class="ange">
+          <img src="./images/6.jpg" alt="Mountain"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact Me</h2>
+      <div class="form-container">
+        <form class="form">
+          <div class="upper">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" name="email" required />
+            </div>
+
+            <div>
+              <label for="fullname">Full Name</label>
+              <input type="text" name="fullname" required />
+            </div>
+
+            <div>
+              <label for="age">Age</label>
+              <input type="number" name="age" required />
+            </div>
+
+            <div>
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" required />
+            </div>
+          </div>
+
+          <div class="message-container">
+            <label for="message">Message</label>
+            <textarea name="message" cols="30" rows="10" required></textarea>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="send_me" name="sendme" />
+            <label for="sendme">Send me a copy</label>
+          </div>
+
+          <div class="submit-container">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Comments</h2>
+      <div class="comments-container">
+        <div class="form-container">
+          <h3>Add Comment</h3>
+          <form id="comment_form" class="form">
+            <div class="form-group">
+              <label for="name_input">Name:</label>
+              <input type="text" id="name_input" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="comment_input">Comment:</label>
+              <textarea id="comment_input" name="comment" required></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" id="submit_btn">Submit Comment</button>
+            </div>
+            <div class="comments-list">
+              <div class="sort-options">
+                <label for="sort_order">Arrange By:</label>
+                <select id="sort_order">
+                  <option value="asc">Oldest</option>
+                  <option value="desc">Newest</option>
+                </select>
+              </div>
+              <div id="comment-list"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
