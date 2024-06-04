@@ -77,36 +77,51 @@
     </div>
 
     <div class="segment">
-        <h2>Comments</h2>
-        <div class="comments-container">
-          <div class="comments-list">
-            <div class="sort-options">
-              <label for="sort_order">Arrange By:</label>
-              <select id="sort_order">
-                <option value="asc">Oldest</option>
-                <option value="desc">Newest</option>
-              </select>
-            </div>
-            <div id="comment_list"></div>
-          </div>
-          <div class="form_container">
-            <h3>Add Comment</h3>
-            <form id="comment_form" class="form">
-              <div class="form-group">
-                <label for="name_input">Name:</label>
-                <input type="text" id="name_input" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="comment_input">Comment:</label>
-                <textarea id="comment_input" name="comment" required> </textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" id="submit_btn">Submit Comment</button>
-              </div>
-            </form>
-          </div>
-        </div>
+      <div class="comment-form">
+     <h2>Leave a Comment</h2>
+     <form>
+       <div>
+         <label for="name">Name</label>
+         <input
+           type="text"
+           id="name"
+           name="name"
+           required
+           placeholder="Enter your Name"
+           oninput="validateInput()"/>
+       </div>
+       <div>
+         <label for="comment">Comment</label>
+         <textarea
+           id="comment"
+           name="comment"
+           required
+           placeholder="Enter your Comment"
+           required
+           oninput="validateInput()"></textarea>
+       </div>
+       <button
+         type="button"
+         id="submit_btn"
+         disabled
+         onclick="addComment()">
+         Comment
+       </button>
+     </form>
       </div>
+
+        <div class="sort-buttons">
+        <button id="sort_asc" onclick="sortComments(true)">
+         Sort Ascending
+        </button>
+        <button id="sort_desc" onclick="sortComments(false)">
+         Sort Descending
+        </button>
+        </div>
+        <div class="comment">
+       <ol id="comment_list"></ol>
+      </div>
+   </div>
 
     <div class="gallery">
       <h2>My Gallery</h2>
