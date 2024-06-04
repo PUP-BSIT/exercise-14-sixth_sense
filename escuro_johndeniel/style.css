@@ -28,6 +28,28 @@ h2 {
   margin-bottom: 30px;
 }
 
+.country-button input[type="submit"] {
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.country-button input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
 h1 {
   font-size: 24px;
   margin: 40px auto;

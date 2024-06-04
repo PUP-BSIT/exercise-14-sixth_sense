@@ -1,10 +1,10 @@
-document.getElementById("search-button").addEventListener("click", function () {
-  var country = document.getElementById("country-input").value;
+document.getElementById("search_button").addEventListener("click", function () {
+  let country = document.getElementById("country_input").value;
 
   fetch("https://restcountries.com/v3.1/name/" + country)
     .then((response) => response.json())
     .then((data) => {
-      let countryDetails = document.getElementById("country-details");
+      let countryDetails = document.getElementById("country_details");
       countryDetails.innerHTML = `
                 <h2>${data[0].name.common}</h2>
                 <img src="${data[0].flags.png}" alt="${data[0].name.common} flag">
@@ -20,7 +20,7 @@ document.getElementById("search-button").addEventListener("click", function () {
       fetch("https://restcountries.com/v3.1/region/" + region)
         .then((response) => response.json())
         .then((data) => {
-          let regionCountries = document.getElementById("region-countries");
+          let regionCountries = document.getElementById("region_countries");
           regionCountries.innerHTML = "<h2>Countries in the same region:</h2>";
           data.forEach((country) => {
             regionCountries.innerHTML += `

@@ -6,7 +6,9 @@ body {
   margin-bottom: 20px;
 }
 
-#country-details,
-#region-countries {
+#country_details,
+#region_countries {
   margin-top: 20px;
 }
+
+
