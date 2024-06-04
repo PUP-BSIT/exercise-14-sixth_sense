@@ -328,15 +328,17 @@ input[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
-#country_input {
+#countryInput {
     width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-#search_button {
+#searchButton {
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
@@ -345,7 +347,7 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
-#search_button:hover {
+#searchButton:hover {
     background-color: #0056b3;
 }
 
@@ -353,14 +355,70 @@ input[type="submit"]:hover {
     margin-top: 20px;
 }
 
-.country-_details img, .region_countries img {
+.countryDetails img, .sameRegioncountries img {
     width: 100px;
     height: auto;
     margin: 10px 0;
 }
 
-.region_countries h2 {
+.button-container {
+  text-align: center;
+  align-items: center;
+}
+
+.countryButton {
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  padding: 15px 30px; /* Adjust padding for wider button */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block; /* Ensures proper centering */
+}
+
+.countryButton:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+.styledButton {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.styledButton:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.styledButton:active {
+  background-color: #003f7f;
+  transform: translateY(0);
+}
+
+.sameRegioncountries h2 {
     margin-top: 20px;
+}
+
+.sameRegioncountries {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sameRegioncountries div {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
 }
 
 
