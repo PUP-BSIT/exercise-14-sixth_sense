@@ -254,7 +254,7 @@ textarea:focus {
   margin-right: 10px;
 }
 
-#search-btn {
+#search_btn {
   padding: 8px 16px;
   background-color: #020041;
   color: #fff;
@@ -263,12 +263,19 @@ textarea:focus {
   cursor: pointer;
 }
 
-#country-details, #region-countries {
-  margin-bottom: 20px;
+.results-container {
+  text-align: center;
 }
 
-#country-details h2, #region-countries h2 {
+#country-details,
+#region-countries {
+  margin-bottom: 20px;
+  display: inline-block;
   text-align: left;
+}
+
+#country-details h2,
+#region-countries h2 {
   background-color: #020041;
   color: #f0f0f0;
   font-family: "Gill Sans", "Trebuchet MS", sans-serif;
