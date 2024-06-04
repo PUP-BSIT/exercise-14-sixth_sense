@@ -322,6 +322,47 @@ input[type="submit"]:hover {
   margin-left: 20px;
 }
 
+.search_box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#country_input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#search_button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search_button:hover {
+    background-color: #0056b3;
+}
+
+.country_details, .region-countries {
+    margin-top: 20px;
+}
+
+.country-_details img, .region_countries img {
+    width: 100px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.region_countries h2 {
+    margin-top: 20px;
+}
+
 
 @media (max-width: 426px) {
   .message-container {
