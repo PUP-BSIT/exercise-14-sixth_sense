@@ -1,6 +1,6 @@
 document.getElementById("search_btn").addEventListener
   ("click", function () {
-  var country = document.getElementById("country_input").value;
+  let country = document.getElementById("country_input").value;
   fetch("https://restcountries.com/v3.1/name/" + country)
     .then((response) => response.json())
     .then((data) => {
