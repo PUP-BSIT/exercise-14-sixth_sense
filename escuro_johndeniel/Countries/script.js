@@ -7,7 +7,7 @@ document.getElementById("search_button").addEventListener("click", function () {
       let countryDetails = document.getElementById("country_details");
       countryDetails.innerHTML = `
                 <h2>${data[0].name.common}</h2>
-                <img src="${data[0].flags.png}" alt="${data[0].name.common} flag">
+          <img src="${data[0].flags.png}" alt="${data[0].name.common} flag">
                 <p>Capital: ${data[0].capital[0]}</p>
                 <p>Region: ${data[0].region}</p>
                 <p>Subregion: ${data[0].subregion}</p>
@@ -25,7 +25,7 @@ document.getElementById("search_button").addEventListener("click", function () {
           data.forEach((country) => {
             regionCountries.innerHTML += `
                             <p>${country.name.common}</p>
-                            <img src="${country.flags.png}" alt="${country.name.common} flag">
+          <img src="${country.flags.png}" alt="${country.name.common} flag">
                         `;
           });
         });
